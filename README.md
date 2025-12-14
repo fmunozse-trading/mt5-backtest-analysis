@@ -14,32 +14,33 @@ Este proyecto analiza reportes de Strategy Tester de MetaTrader 5 para extraer e
 
 ## Instalación y Uso
 
-1.  **Clonar/Navegar al proyecto:**
+1.  **Instalar `uv` (si no lo tienes):**
+    
+    *macOS/Linux:*
     ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
+    *Windows:*
+    ```powershell
+    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+    ```
+
+2.  **Clonar el proyecto:**
+    ```bash
+    git clone git@github.com:fmunozse-trading/mt5-backtest-analysis.git
     cd mt5-backtest-analysis
     ```
 
-2.  **Sincronizar dependencias:**
+3.  **Sincronizar dependencias:**
     ```bash
     uv sync
     ```
 
-3.  **Ejecutar Jupyter Lab:**
+4.  **Ejecutar Jupyter Lab:**
     ```bash
     uv run jupyter lab
     ```
 
-4.  **Abrir el notebook:**
+5.  **Abrir el notebook:**
     Navega a la carpeta `notebooks/` y abre `streak_analysis.ipynb`.
 
-> [!IMPORTANT]
-> **Ajuste de rutas:** Como el notebook se movió a la carpeta `notebooks/`, asegúrate de que las rutas a los datos apunten al directorio padre.
->
-> Cambia:
-> ```python
-> file_path = "data/..."
-> ```
-> por:
-> ```python
-> file_path = "../data/..."
-> ```
